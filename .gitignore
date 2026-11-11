@@ -1,0 +1,36 @@
+# Xcode
+*.xcuserstate
+xcuserdata/
+*.xccheckout
+*.moved-aside
+DerivedData/
+*.hmap
+*.ipa
+*.dSYM.zip
+*.dSYM
+*.xcscmblueprint
+
+# Build
+build/
+*.o
+*.d
+*.LinkFileList
+
+# CocoaPods
+Pods/
+*.xcworkspace/xcuserdata
+
+# SPM
+.build/
+.swiftpm/
+
+# Firebase / Secrets
+GoogleService-Info.plist
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Previews
+PreviewReplays/

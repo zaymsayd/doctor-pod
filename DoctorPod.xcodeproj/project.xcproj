@@ -10,10 +10,21 @@
       "Base",
     ],
   },
+  "packages": [
+    {
+      "kind": "remote",
+      "repository": "https://github.com/firebase/firebase-ios-sdk",
+      "version": {
+        "up-to-next-major-version": "12.11.0",
+      },
+    },
+  ],
   "files": [
+    { "path": "DoctorPod.storekit", "target-membership": [ "DoctorPod/resources" ] },
     { "kind": "folder", "path": "DoctorPod", "target-membership": [ "DoctorPod" ] },
     { "kind": "folder", "path": "DoctorPodTests", "target-membership": [ "DoctorPodTests" ] },
     { "kind": "folder", "path": "DoctorPodUITests", "target-membership": [ "DoctorPodUITests" ] },
+    { "path": "GoogleService-Info.plist", "target-membership": [ "DoctorPod/resources" ] },
     {
       "kind": "group",
       "name": "Products",
@@ -35,6 +46,13 @@
         "frameworks",
         "resources",
       ],
+      "package-product-members": [
+        {
+          "package": "firebase-ios-sdk",
+          "product-name": "FirebaseFirestore",
+          "build-phase": { "build-phase": "frameworks" },
+        },
+      ],
       "build-settings": {
         "ASSETCATALOG_COMPILER_APPICON_NAME": "AppIcon",
         "ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME": "AccentColor",
@@ -48,6 +66,7 @@
         "INFOPLIST_KEY_UILaunchScreen_Generation": "YES",
         "INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad": "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight",
         "INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone": "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight",
+        "IPHONEOS_DEPLOYMENT_TARGET": "17.6",
         "LD_RUNPATH_SEARCH_PATHS": [
           "$(inherited)",
           "@executable_path/Frameworks",
